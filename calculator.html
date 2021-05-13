@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Calculator With Out Javascript Code</title>
+<link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+ <form name="calc">
+<table>
+    <tr>
+        <td>
+            <input  id="answer" type="text" name="input" size="16">
+            <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input id="one" type="button" name="one" value="1">
+            <input id="two" type="button" name="two" value="2" >
+            <input id="three" type="button" name="three" value="3" >
+            <input id="plus" type="button" class="operator" name="plus" value="+">
+            <br>
+            <input id="four" type="button" name="four" value="4">
+            <input id="five" type="button" name="five" value="5">
+            <input id="six" type="button" name="six" value="6">
+            <input id="minus" type="button" class="operator" name="minus" value="-">
+            <br>
+            <input id="seven" type="button" name="seven" value="7">
+            <input id="eight" type="button" name="eight" value="8">
+            <input id="nine" type="button" name="nine" value="9"> 
+            <input id="multiplication" type="button" class="operator" name="times" value="*">
+            <br>
+            <input type="button" id="clear" name="clear" value=" C ">
+            <input id="zero" type="button" name="zero" value="0">
+            <input id="equal" type="button" name="doit" value=" = ">
+            <input id="divide" type="button" class="operator" name="div" value="/">
+            <br>
+        </td>
+    </tr>
+</table>
+
+
+ </form>   
+    
+
+ <script>
+
+
+
+    // numbers 
+     const one = document.getElementById('one');
+        one.addEventListener('click', function(){
+            // const value1 =  document.getElementById('one').value;
+            // const valueNumber = parseInt(value1);
+            // let num = document.getElementById('answer').value + valueNumber;
+            // let Totalnum = document.getElementById('answer').value = num;
+            // Totalnum = parseInt(Totalnum);
+
+            // console.log(Totalnum);
+            // console.log(typeof(Totalnum));
+
+            const value = number("one");
+            console.log(value);
+
+
+        })
+
+        const two = document.getElementById('two');
+        two.addEventListener('click', function(){
+
+            const value = number("two");
+            console.log(value);
+            
+
+        })
+
+        const three = document.getElementById('three');
+        three.addEventListener('click', function(){
+
+            const value = number("three");
+            console.log(value);
+            
+
+        })
+
+        const four = document.getElementById('four');
+        four.addEventListener('click', function(){
+
+            const value = number("four");
+            console.log(value);
+            
+
+        })
+
+        const five = document.getElementById('five');
+        five.addEventListener('click', function(){
+
+            const value = number("five");
+            console.log(value);
+            
+
+        })
+
+        const six = document.getElementById('six');
+        six.addEventListener('click', function(){
+
+            const value = number("six");
+            console.log(value);
+            
+
+        })
+
+        const seven = document.getElementById('seven');
+        seven.addEventListener('click', function(){
+
+            const value = number("seven");
+            console.log(value);
+            
+
+        })
+
+        const eight = document.getElementById('eight');
+        eight.addEventListener('click', function(){
+
+            const value = number("eight");
+            console.log(value);
+            
+
+        })
+
+        const nine = document.getElementById('nine');
+        nine.addEventListener('click', function(){
+
+            const value = number("nine");
+            console.log(value);
+            
+
+        })
+
+        const zero = document.getElementById('zero');
+        zero.addEventListener('click', function(){
+
+            const value = number("zero");
+            console.log(value);
+            
+
+        })
+
+        
+
+
+        // symbols
+
+
+        const addition = document.getElementById('plus');
+        addition.addEventListener("click", function(){
+            
+
+            /** Signs() function is using here for shortening these pieces of codes
+            // const symbol=document.getElementById("plus").value;
+            // console.log(symbol);
+            // let Totalnum = document.getElementById('answer').value;
+            // console.log(Totalnum);
+            // let addition = Totalnum + symbol;
+            // console.log(addition);
+            // console.log(typeof(addition)); 
+            // document.getElementById('answer').value= addition;
+            **/
+
+            const symbol = Signs("plus");
+            console.log(symbol);
+            return symbol;
+        })
+        
+       
+
+        const reduction = document.getElementById('minus');
+        reduction.addEventListener("click", function(){
+            const symbol = Signs("minus");
+            console.log(symbol);
+            return symbol;
+        })
+
+
+
+
+        const multiplication = document.getElementById('multiplication');
+        multiplication.addEventListener("click", function(){
+            const symbol = Signs("multiplication");
+            console.log(symbol);
+            return symbol;
+        })
+
+
+
+        const divide = document.getElementById('divide');
+        divide.addEventListener("click", function(){
+            const symbol = Signs("divide");
+            console.log(symbol);
+            return symbol;
+        })
+
+
+
+
+        // equal
+
+        const equal = document.getElementById('equal');
+        equal.addEventListener('click', function(){
+            const display = document.getElementById('answer').value;
+            const num = eval(display);
+            const Total = document.getElementById('answer').value = num;
+            console.log(num);
+            console.log(typeof(num));
+            
+
+
+        })
+
+
+
+        // clear 
+
+        const blank = document.getElementById('clear');
+        blank.addEventListener('click', function(){
+
+            const Total = document.getElementById('answer').value = "00";
+            console.log(Total);
+            console.log(typeof(Total));
+            
+
+
+        })
+
+        // used functions
+
+        function number(id){
+            const value1 =  document.getElementById(id).value;
+            const valueNumber = parseInt(value1);
+
+            let num = document.getElementById('answer').value + valueNumber;
+            let Totalnum = document.getElementById('answer').value = num;
+            Totalnum = parseInt(Totalnum);
+
+            console.log(Totalnum);
+            console.log(typeof(Totalnum));
+            return Totalnum;
+        }
+
+        
+        
+
+        function Signs(id){
+        const symbol = document.getElementById(id).value;
+            // console.log(symbol);
+            let Totalnum = document.getElementById('answer').value;
+            console.log(Totalnum);
+            let addition = Totalnum + symbol;
+            // console.log(addition);
+            // console.log(typeof(addition)); 
+            const final = document.getElementById('answer').value= addition;
+            return final;
+
+        }
+    
+
+</script>
+</body>
+</html>
